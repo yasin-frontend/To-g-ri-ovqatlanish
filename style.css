@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+
+.big {
+  background-image: url(img/stena1005.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.logo{
+  width: 60px;
+  height: 60px;
+  background-image: url(img/37581.jpg);
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.list {
+  font-size: 24px;
+  display: none;
+}
+
+.links a {
+  font-size: 20px;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: #FF8506;
+  left: 0px;
+  width: 100%;
+  bottom: -3px;
+  transition: 0.3s;
+  transform: scale(0, 1);
+}
+
+.links a:hover::after {
+  transform: scale(1, 1);
+}
+
+.links {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.iconss {
+  display: none;
+}
+
+.hero {
+  width: 440px;
+  height: 435px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(img/enlarge_imgpreview-fotor-bg-remover-2024022517268.png);
+  animation: anim 50s linear infinite;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav {
+  width: 60px;
+  height: 250px;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 10px 0px 0px 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.icons {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+
+}
+
+.icons img {
+  transition: all 0.2s;
+  cursor: pointer;
+  filter: blur(0px);
+}
+
+.icons img:hover {
+  filter: blur(0px);
+}
+
+.icons:hover>img:not(:hover) {
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 85vh;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+}
+
+.texts {
+  font-size: 45px;
+  color: #FF8506;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.new-texts {
+  width: 400px;
+  height: 100%;
+  margin-top: 50px;
+  color: orangered;
+}
+
+.texx p{
+  position: relative;
+  top: -20px;
+}
+
+.texts h1 {
+  line-height: 80px;
+  font-weight: 600;
+}
+
+.new-texts h3{
+  color: #F62217;
+  font-size: 35px;
+}
+.qora {
+  position: absolute;
+  top: calc(50vh - 125px);
+  right: 0px;
+}
+.texts p {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+@media screen and (max-width:700px) {
+  .hero {
+    width: 395px;
+    height: 390px;
+  }
+
+  .navbar{
+    justify-content: center;
+  }
+
+  .container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  header {
+    justify-content: center;
+    height: 80vh;
+    margin-top: 20px;
+  }
+
+  .list {
+    color: #fefefe;
+    font-size: 48px;
+    z-index: 101;
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    right: 0px;
+    padding: 20px;
+    top: 0;
+    margin-left: -20px;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(5px);
+    transform: translateY(-100%);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .iconss {
+    width: 280px;
+    height: 100px;
+    display: block;
+    font-size: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+  }
+
+  .links a {
+    font-size: 25px;
+    top: 70px;
+  }
+
+  .links a:hover::after {
+    transform: scale(0);
+  }
+
+  .links.linksNew {
+    transition: 0.3s;
+    transform: translateY(0%);
+  }
+
+  .texts {
+    text-align: start;
+    margin-left: 20px;
+  }
+
+  .texts h3 {
+    font-size: 50px;
+    line-height: 95px;
+  }
+
+  .texts p {
+    font-size: 23px;
+  }
+
+  .new-texts {
+    width: 90%;
+    /* background-color: #F62217; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hero-2 {
+    width: 42%;
+    height: 180px;
+    background-image: url(img/foooooood-fotor-bg-remover-2024022521265.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .texx {
+    width: 50%;
+    position: relative;
+  }
+
+  .texx p{
+    top: 34%;
+    left: 5px;
+    position: absolute;
+  }
+
+  .new-texts{
+    margin-top: 25px;
+  }
+
+  .big {
+    background-image: url(/img/enlarge_stena900px.png);
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo{
+    width: 40px;
+    height: 40px;
+    background-image: url(img/37581.jpg);
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .list {
+    color: #fefefe;
+    font-size: 38px;
+    z-index: 101;
+    display: block;
+  }
+
+  .texts {
+    text-align: center;
+  }
+
+  .texts h1 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+  .texts p {
+    font-size: 18px;
+  }
+
+  .texx {
+    position: relative;
+    z-index: 1;
+    text-align: start;
+    width: 90%;
+    margin-top: -25px;
+  }
+
+  .links {
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    right: 0px;
+    padding: 20px;
+    top: 0;
+    margin-left: -20px;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(5px);
+    transform: translateY(-100%);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .new-texts {
+    justify-content: center;
+  }
+
+  .texx h3 {
+    font-size: 38px;
+  }
+
+  .texx p{
+    font-size: 15px;
+    /* position: relative; */
+    top: 55%;
+    left: 5px;
+  }
+
+  .hero-2 {
+    position: absolute;
+    z-index: 0;
+    filter: blur(2px);
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .new-texts p {
+    font-size: 20px;
+  }
+
+  header {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .hero{
+    width: 245px;
+    height: 240px;
+    margin-top: 75px;
+  }
+}
+
+@media (max-width:395px) {
+  .texts h1{
+    font-size: 65px;
+    line-height: 80px;
+  }
+
+  .texx{
+    margin-top: -30px;
+  }
+
+  .texx h3{
+    font-size: 40px;
+  }
+  .texx p{
+    font-size: 15px;
+    /* position: relative; */
+    top: 55%;
+    left: 5px;
+  }
+
+  .hero-2{
+    margin-top: -18px;
+  }
+
+  .links {
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    right: 0px;
+    padding: 20px;
+    top: 0;
+    margin-left: -20px;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(5px);
+    transform: translateY(-100%);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .hero{
+    width: 230px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 375px) {
+  .texts h1{
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+  .texx h3{
+    font-size: 40px;
+  }
+  .texx p{
+    font-size: 15px;
+    /* position: relative; */
+    top: 55%;
+    left: 5px;
+  }
+
+  .hero-2{
+    margin-top: -18px;
+  }
+
+  .links {
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    right: 0px;
+    padding: 20px;
+    top: 0;
+    margin-left: -20px;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(5px);
+    transform: translateY(-100%);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .hero{
+    width: 200px;
+    height: 195px;
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
